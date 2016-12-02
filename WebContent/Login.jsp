@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -195,7 +196,7 @@ span.psw {
     }
 }
 </style>
-    <title>Forgot Password</title>
+    <title>Log In</title>
 </head>
 <body>
 
@@ -211,7 +212,7 @@ span.psw {
         </div>
       </div>
     </div>
-  <div class="col-md-4">
+    <div class="col-md-4">
       </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -221,10 +222,6 @@ span.psw {
 <a class="btn btn-success " href="SignUp.jsp" type="submit">Đăng Ký</a> 
 </form>
 </div>
-
-    
-
-
 
             <script>
 // Get the modal
@@ -239,11 +236,11 @@ window.onclick = function(event) {
 </script>
 
 
-        </div>
+
         <div class="navbar-collapse collapse">
           
         </div><!--/.navbar-collapse -->
- 
+    </div>
 
  <div class="row">
           <div class="col-md-12">
@@ -308,33 +305,30 @@ window.onclick = function(event) {
             <div class="col-md-6">
               <div class="panel panel-info">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Forgot PassWord</h3>
+                  <h3 class="panel-title">Đăng Nhâp</h3>
                 </div>
                 <div class="panel-body">
                     <!--cot trái-->
+                    <form method="post" action="loginAuthencation.jsp">
                       <div class="col-md-8">
-                      <form method="post" action="SendServlet">
-					    <div class="form_item"><span>Email:</span>
-							       <br><input type="email" name="email" value=""></div>
-                          <input type="submit" class="" value="Send"/>
+					    <div class="form_item"><span>User name</span>
+							       <br><input type="text" name="username" value=""></div>
+							<div class="form_item"><span>Password</span>
+							       <br><input type="password" name="password" value=""></div>
+							       <input type="submit" class="btn btn-primary" role="button" value="Đăng Nhập">
 
-                        </form>
+                     	 </div>  
+                      </form>
+                      <font color="red"><c:if test="${not empty param.errMsg}">
+				            <c:out value="${param.errMsg}" />
+				            </c:if></font>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-
-                      </div>
-
-   
- 
-  
-  
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </body>
 
 <footer>

@@ -1,3 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -92,9 +96,12 @@
       </div>
     </div>
     <div class="col-md-4">
-      </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Personalinfo.jsp">Nhóm 5</a></li>
+            <li>
+	            <a href="Personalinfo.jsp">
+	            	<c:out value="${sessionScope['loginUser']}"></c:out>
+	            </a>
+            </li>
             <li class="active"><a href="index.jsp">Đăng Xuất<span class="sr-only"></span></a></li>
           </ul>
           

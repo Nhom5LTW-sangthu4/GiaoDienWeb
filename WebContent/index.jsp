@@ -198,144 +198,26 @@ span.psw {
 <div class="container">
   
  <div class="well well-lg">
-
-
   <div id="navbar" class="navbar-collapse collapse">
     <div class="col-md-8">
       <div class="container">
         <div class="media">
-          <img src="Image/MsHoa.jpg">
+          <img src="Image/hinh1.jpg">
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+  <div class="col-md-4">
       </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <button class="btn btn-info" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng Nhập</button>
-            <div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="Image/14123hinh-nen-canh-buom-ky-dieu-tren-nen-xanh.jpg" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label><b>Username</b></label>
-      <br>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <br>
-
-      <label><b>Password</b></label>
-      <br>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <br>
-
-      <li><a href="ForgotPassword.jsp">Forgot Password?</a></li>
-
-      <a class="btn btn-success " href="HomeSauDangNhap.jsp" type="submit">Log In</a> 
-      <input type="checkbox" checked="checked"> Remember me <br>
-      <a href="Admin.jsp">Admin</a>
-    </div>
-
-    
-  </form>
-</div>
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+            <a class="btn btn-success " href="Login.jsp" type="submit">Đăng Nhập</a> 
 
 <ul class="nav navbar-nav navbar-right">
-            <button class="btn btn-info" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng Ký</button>
-            <div id="id02" class="modal">
-  
-  <form class="modal-content animate" action="action_page.php">
-
-
-    <div class="container">
-      <label><b>Your Name</b></label>
-      <br>
-      <input type="text" placeholder="Enter Your Name" name="uname" required>
-      <br> 
-
-      <label><b>Username</b></label>
-      <br>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <br>
-
-      <label><b>Password</b></label>
-      <br>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <br>
-
-      <label><b>Confirm Password</b></label>
-      <br>
-      <input type="password" placeholder="Confirm Password" name="psw" required>
-      <br>
-
-      <label><b>Email</b></label>
-      <br>
-      <input type="text" placeholder="Email" name="text" required>
-      <br>
-
-      <label><b>Mobile</b></label>
-      <br>
-      <input type="text" placeholder="Mobile" name="text" required>
-      <br>
-
-      
-
-      <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Notification</h4>
-        </div>
-        <div class="modal-body">
-          <p>Congratulations!!! You have successfully registered</p>
-        </div>
-
-       
-      </div>
-      
-    </div>
-  </div>
-  
+<a class="btn btn-success " href="SignUp.jsp" type="submit">Đăng Ký</a> 
 </div>
 
-</body>
-</html>
-    </div>
 
-    
-  </form>
-</div>
+    </div>
 
             <script>
 // Get the modal
@@ -350,11 +232,10 @@ window.onclick = function(event) {
 </script>
 
 
-        </div>
         <div class="navbar-collapse collapse">
           
         </div><!--/.navbar-collapse -->
-    </div>
+    
 
   <div class="row">
           <div class="col-md-12">
@@ -563,19 +444,21 @@ window.onclick = function(event) {
           </div><!--endrow chinh-->
       </div>
       </div>
-</body>
-<footer>
-	<div class="well well-lg">
-		<div class="row">
-			<div class="col-md-12">
+      </div>
+      </div>
+ <div class="container">
+ <footer>
+	<div class="well well-lg">	
 				<div class="text">
 					<h6>Copyright © 2013, Trung Tâm Luyện Thi Toeic </h6>
 					<h6>Địa chỉ: 69 Võ Văn Ngân, Phường Linh Chiểu, Quận Thủ Đức, Thành phố Hồ Chí Minh.</h6>
 					<h6>Điện thoại: (+84 - 8) 38968641 - (+84 - 8) 38961333</h6>
 					<h6>E-mail: TrungTamToeic@gmail.com</h6>
 				</div>
-			</div>
-		</div>
-	</div>
+	</div>	
 </footer>
+</div>
+</body>
+
+
 </html>
