@@ -212,7 +212,7 @@ span.psw {
     <div class="col-md-8">
     <div class="container">
       <div class="media">
-        <img src="Image/logo.jpg">
+        <img src="Image/hinh1.jpg">
       </div>
     </div>
     </div>
@@ -220,18 +220,16 @@ span.psw {
       </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Personalinfo.jsp">Nhóm 5</a></li>
-            <li class="active"><a href="DangNhap.jsp">Đăng Xuất<span class="sr-only"></span></a></li>
+             <a href="Personalinfo.jsp?username=<c:out value="${sessionScope['loginUser']}" />"> 
+            <c:out value="${sessionScope['loginUser']}" />
+            </a>
+
+            <a href="index.jsp">Đăng Xuất</a>
           </ul>
           <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
 
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="seach" placeholder="seach" class="form-control">
-            </div>
-            <a href="Reading1.jsp" class="btn btn-info" role="button">Search</a>
-          </form>
+  
         </div>
 
 
@@ -243,7 +241,7 @@ span.psw {
 
   <div class="row">
           <div class="col-md-12">
-            <nav class="navbar navbar-default" style="background: #0a408a;">
+            <nav class="navbar navbar-default" style="background: #07E5F5;">
               <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                        <span class="sr-only">Toggle navigation</span>
@@ -254,14 +252,14 @@ span.psw {
               </div>
               <div class="navbar-collapse collapse" id="main-menu">
                 <ul class="nav nav-justified " >
-                    <li><a class="textcolor" style="color: white" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
-                    <li class="dropdown"><a style="color: white" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="UpLoad.jsp">Đăng bài</a></li>
                           <li><a href="UpLoad2.jsp">Những bài đã đăng </a></li>
                         </ul>  
-                    <li><a class="textcolor" style="color: white" href="Share.jsp"><strong>Share</strong></a></li>
-                     <li class="dropdown"><a style="color: white" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="Share.jsp"><strong>Share</strong></a></li>
+                     <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="Reading.jsp">Reading Test</a></li>
                           <li><a href="Listening.jsp">Listening Test</a></li>
@@ -314,8 +312,7 @@ span.psw {
                           <div class="form-group">
                             <label for="tieude" class="col-sm-2">Tới</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="To" placeholder="Nhập thông tin người nhận">
-                              <span class="help-block">Email người nhận</span>
+                              <input type="text" class="form-control" id="To" placeholder="Email người nhận">
                             </div>
                           </div>
                           <div class="form-group">

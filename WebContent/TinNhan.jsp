@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Bootstrap Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,13 +19,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
   <style type="text/css">
+  p.groove {border-style: groove;}
     <body>
+
       {
         padding-bottom: 40px;
         color: #5a5a5a;
@@ -72,6 +82,7 @@
 }
     </body>
   </style>
+
   <style>
 /* Full-width input fields */
 input[type=text], input[type=password]{
@@ -97,8 +108,8 @@ button {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-    width: 20%;
-    padding: 5px 9px;
+    width: auto;
+    padding: 10px 18px;
     background-color: #f44336;
 }
 
@@ -188,42 +199,31 @@ span.psw {
        width: 40%;
     }
 }
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
 </style>
-    <title>Listening</title>
+    <title>Tin Nhắn</title>
 </head>
 <body>
-
 <div class="container">
   
  <div class="well well-lg">
 
-  <div id="navbar" class="navbar-collapse collapse">
 
+  <div id="navbar" class="navbar-collapse collapse">
     <div class="col-md-8">
-      <div class="container">
-        <div class="media">
-          <img src="Image/MsHoa.jpg">
-        </div>
+    <div class="container">
+      <div class="media">
+        <img src="Image/logo.jpg">
       </div>
+    </div>
     </div>
     <div class="col-md-4">
       </ul>
-          <ul class="nav navbar-nav navbar-right">
-             <a href="Personalinfo.jsp?username=<c:out value="${sessionScope['loginUser']}" />"> 
-            <c:out value="${sessionScope['loginUser']}" />
-            </a>
 
-            <a href="index.jsp">Đăng Xuất</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Personalinfo.jsp">Nhóm 5</a></li>
+            <li class="active"><a href="index.jsp">Đăng Xuất<span class="sr-only"></span></a></li>
           </ul>
-          
-        </div>
-        <div class="navbar-collapse collapse">
+          <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
 
           <form class="navbar-form navbar-right">
@@ -232,12 +232,18 @@ span.psw {
             </div>
             <a href="Reading1.jsp" class="btn btn-info" role="button">Search</a>
           </form>
+        </div>
+
+
+        </div>
+        <div class="navbar-collapse collapse">
+          
         </div><!--/.navbar-collapse -->
     </div>
 
   <div class="row">
           <div class="col-md-12">
-            <nav class="navbar navbar-default" style="background: #07E5F5;">
+            <nav class="navbar navbar-default" style="background: brown;">
               <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                        <span class="sr-only">Toggle navigation</span>
@@ -248,14 +254,14 @@ span.psw {
               </div>
               <div class="navbar-collapse collapse" id="main-menu">
                 <ul class="nav nav-justified " >
-                    <li><a class="textcolor" style="color: black" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
-                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: blue" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="UpLoad.jsp">Đăng bài</a></li>
                           <li><a href="UpLoad2.jsp">Những bài đã đăng </a></li>
                         </ul>  
-                    <li><a class="textcolor" style="color: black" href="Share.jsp"><strong>Share</strong></a></li>
-                     <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: blue" href="Share.jsp"><strong>Share</strong></a></li>
+                     <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="Reading.jsp">Reading Test</a></li>
                           <li><a href="Listening.jsp">Listening Test</a></li>
@@ -264,15 +270,8 @@ span.psw {
                        
                 </ul>
               </div>
-            
-                
-            </nav>
-          </div>
-        </div>
-
-
-
-
+      </div>
+    </div>
 
 <div id="Main">
           <div class="row">
@@ -300,141 +299,137 @@ span.psw {
               <!--quang cao-->
               
             </div>
+          <!--end cột trái-->
+
+          <!--cột giữa-->
+            <div class="col-md-10">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Tin Nhắn</h3>
+                </div>
+                <div class="panel-body">
+                    <!--cot trái-->
+                      <div class="col-md-8">
+                        <form id="FormGuiBai" method="post" class="form-horizontal" action="" role="form">
+                          <div class="form-group">
+                            <label for="tieude" class="col-sm-2">Tới</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="To" placeholder="Nhập thông tin người nhận">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="tentacgia" class="col-sm-2">Chủ Đề</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="chude" placeholder="Nhập Chủ Đề">
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label for="tentacgia" class="col-sm-2">Link</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="Link" placeholder="Reading.jsp">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="noidung" class="col-sm-2">Đính kèm tệp</label>
+                            <div class="col-sm-10">
+                              <input type="file"  id="tepdinhkem">
+                            </div>
+                          </div>
+                          <button class="btn btn-info" id="Share" style="width:auto;">Gửi</button>
+                        </form>
+                        <script>
+                          
+                          function validateText(id)
+                          {
+                            if($("#"+id).val()==null || $("#"+id).val()=="")
+                            {
+                              var div=$("#"+id).closest("div");
+                              div.addClass("has-error");
+                              return false;
+                            }
+                            else
+                            {
+                              var div=$("#"+id).closest("div");
+                              div.removeClass("has-error");
+                              return true
+                            };
+                          }
+                          $(document).ready(
+                            function()
+                            {
+                              $("#Share").click(function()
+                              {
+                                
+                                if(!validateText("To"))
+                                  return false;
+                                
+                                if(!validateText("chude"))
+                                  return false;
+
+                                if(!validateText("noidung"))
+                                  return false;
+                                
+                                if(!validateText("tepdinhkem"))
+                                  return false;
+                                
+                                
+                                $("form#FormGuiBai").submit();
+                              });
+                            });
+                        </script>
+
+                      </div>
+                    <!--end cột trái-->
+
+                    <!--cot phải-->
+                    
+                    <!--end cot phải-->
+                    </div>
+                    <div class="row">
+                      <div class="col-md-offset-4">
+                        <!-- <button type="submit" id="guibai" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
+                          Gửi Bài
+                        </button> -->
+                        <br><br>
+                        
+
+                
+                      </div>
+                        
+                    </div>
+                </div>
+              </div>
+            
+            </div>
+          <!--end cột giữa-->
+          </div><!--endrow chinh-->
+      </div>
 
 
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap.min.js"></script>
+
+
+
+  
+  </div>
+</div>
+</div>
+
 
 </body>
-
- <div align="justify" class="col-md-9">
-              
-                <div class="panel-body"></div>
-
-                    <div class="well">
-                      
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                           <div class="container">
- <form>
- <p align="left"> Select the name of the song in the audio later:</p>
- <br>
-<p align="left">1.    
-  <audio controls>
-  <source src="One Call Away.ogg" type="audio/ogg">
-  <source src="audio/One Call Away.mp3" type="audio/mpeg">
-</audio>
-</p>  
-
-  <input type="radio" name="gender" value="male" checked>A. One Call Away<br>
-  <input type="radio" name="gender" value="female">B.  Marry You<br>
-  <input type="radio" name="gender" value="other">C. We don't talk any more<br>
-  <input type="radio" name="gender" value="other">D. See you again<br>
-</form>
-<br>
-<form>
-<p align="left">2.
- <audio controls>
-  <source src="BlankSpace.ogg" type="audio/ogg">
-  <source src="audio/BlankSpace.mp3" type="audio/mpeg">
-</audio>
-</p>
-  <input type="radio" name="gender" value="male" checked>A. Blank Space<br>
-  <input type="radio" name="gender" value="female">B. Perfect IIIusion<br>
-  <input type="radio" name="gender" value="other">C. Do You Wanna Come Over?<br>
-  <input type="radio" name="gender" value="other">D. Prudent<br>
-</form>
-<br>
-<form>
-<p align="left">3.
-<audio controls>
-  <source src="Closer.ogg" type="audio/ogg">
-  <source src="audio/Closer.mp3" type="audio/mpeg">
-</audio></p>
-  <input type="radio" name="gender" value="male" checked>A. Face To Face<br>
-  <input type="radio" name="gender" value="female">B. Closer<br>
-  <input type="radio" name="gender" value="other">C. Prudent<br>
-  <input type="radio" name="gender" value="other">D. One Call Away<br>
-</form>
-<br>
-<form>
-<p align="left">4.
-<audio controls>
-  <source src="WeDontTalkAnymore.ogg" type="audio/ogg">
-  <source src="audio/WeDontTalkAnymore.mp3" type="audio/mpeg">
-</audio>
-</p>
-  <input type="radio" name="gender" value="male" checked>A. CLoser<br>
-  <input type="radio" name="gender" value="female">B. One Call Away<br>
-  <input type="radio" name="gender" value="other">C. We Dont Talk Anymore<br>
-  <input type="radio" name="gender" value="other">D. Baby<br>
-</form>
-<br>
-
-
-<body>
-  							<div id="navbar" class="navbar-collapse collapse">
-
-								    <div class="col-md-4">
-										      </ul>
-										
-										          <ul class="nav navbar-nav navbar-right">    
-										            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Submit</button>
-										            <div id="id01" class="modal">
-										  
-										  <form class="modal-content animate" action="action_page.php">
-										
-										    <div class="container">
-										      <div class="imgcontainer">
-										      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-										    </div>
-										    </div>
-										
-										    <div class="container">
-										    <h1>Score</h1>
-										      <label><b>Tổng Điểm</b></label>
-										      <br>
-										      <input type="text" placeholder="75/100" name="uname" required>
-										      <br> 
-										      <label><b>Số Câu Đúng</b></label>
-										      <br>
-										      <input type="text" placeholder="3/4" name="uname" required>
-										      <br> 
-										      
-										    </div>
-										     <div class="container" style="background-color:">
-										    <a href="Listening.jsp" class="btn btn-info" role="button">Again</a>
-										    <a href="Listening.jsp" class="btn btn-info" role="button">Next</a>
-								    
-								  </div>
-								
-								    
-								    </div>
-								    
-								  </form>
-									</div>
-								</div>
-							</div>
-						</div>
+<footer>
+<div class="container">
+		<div class="well well-lg">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="text">
+						<h6>Copyright © 2013, Trung Tâm Luyện Thi Toeic </h6>
+						<h6>Địa chỉ: 69 Võ Văn Ngân, Phường Linh Chiểu, Quận Thủ Đức, Thành phố Hồ Chí Minh.</h6>
+						<h6>Điện thoại: (+84 - 8) 38968641 - (+84 - 8) 38961333</h6>
+						<h6>E-mail: TrungTamToeic@gmail.com</h6>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-</body>
-<footer>
-	<div class="well well-lg">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="text">
-					<h6>Copyright © 2013, Trung Tâm Luyện Thi Toeic </h6>
-					<h6>Địa chỉ: 69 Võ Văn Ngân, Phường Linh Chiểu, Quận Thủ Đức, Thành phố Hồ Chí Minh.</h6>
-					<h6>Điện thoại: (+84 - 8) 38968641 - (+84 - 8) 38961333</h6>
-					<h6>E-mail: TrungTamToeic@gmail.com</h6>
-				</div>
-			</div>
-		</div>
-	</div>
+</div>	
 </footer>
 </html>

@@ -208,7 +208,7 @@ span.psw {
     <div class="col-md-8">
       <div class="container">
         <div class="media">
-          <img src="Image/MsHoa.jpg">
+          <img src="Image/hinh1.jpg">
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@ window.onclick = function(event) {
 
  <div class="row">
           <div class="col-md-12">
-            <nav class="navbar navbar-default" style="background: brown;">
+            <nav class="navbar navbar-default" style="background: #07E5F5;">
               <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                        <span class="sr-only">Toggle navigation</span>
@@ -255,14 +255,14 @@ window.onclick = function(event) {
               </div>
               <div class="navbar-collapse collapse" id="main-menu">
                 <ul class="nav nav-justified " >
-                    <li><a class="textcolor" style="color: blue" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
-                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="UpLoad.jsp">Đăng bài</a></li>
                           <li><a href="UpLoad2.jsp">Những bài đã đăng </a></li>
                         </ul>  
-                    <li><a class="textcolor" style="color: blue" href="Share.jsp"><strong>Share</strong></a></li>
-                    <li><a class="textcolor" style="color: blue" href="Test.jsp" ><strong>Test</strong></a></li>
+                    <li><a class="textcolor" style="color: black" href="Share.jsp"><strong>Share</strong></a></li>
+                    <li><a class="textcolor" style="color: black" href="Test.jsp" ><strong>Test</strong></a></li>
                        
                 </ul>
               </div>
@@ -309,19 +309,14 @@ window.onclick = function(event) {
                 </div>
                 <div class="panel-body">
                     <!--cot trái-->
-                    <form method="post" action="loginAuthencation.jsp">
-                      <div class="col-md-8">
-					    <div class="form_item"><span>User name</span>
-							       <br><input type="text" name="username" value=""></div>
-							<div class="form_item"><span>Password</span>
-							       <br><input type="password" name="password" value=""></div>
-							       <input type="submit" class="btn btn-primary" role="button" value="Đăng Nhập">
-
-                     	 </div>  
-                      </form>
+                    <form action="loginAuthencation.jsp" >
+				            Username: <input type="text" name="username"/><br/>
+				            Password: <input type="password" name="password"/><br/>
+				            <input type="submit" value="Đăng nhập"/>
+       				 </form>
                       <font color="red"><c:if test="${not empty param.errMsg}">
-				            <c:out value="${param.errMsg}" />
-				            </c:if></font>
+			            <c:out value="${param.errMsg}" />
+			            </c:if></font>
 </div>
 </div>
 </div>

@@ -239,7 +239,7 @@ window.onclick = function(event) {
 
   <div class="row">
           <div class="col-md-12">
-            <nav class="navbar navbar-default" style="background: brown;">
+            <nav class="navbar navbar-default" style="background: #07E5F5;">
               <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                        <span class="sr-only">Toggle navigation</span>
@@ -250,14 +250,14 @@ window.onclick = function(event) {
               </div>
               <div class="navbar-collapse collapse" id="main-menu">
                 <ul class="nav nav-justified " >
-                    <li><a class="textcolor" style="color: blue" href="DangNhap.jsp"><strong>Home</strong></a></li>
-                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="DangNhap.jsp"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="UpLoad.jsp">Đăng bài</a></li>
                           <li><a href="UpLoad2.jsp">Những bài đã đăng </a></li>
                         </ul>  
-                    <li><a class="textcolor" style="color: blue" href="Share.jsp"><strong>Share</strong></a></li>
-                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="Share.jsp"><strong>Share</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="Reading.jsp">Reading Test</a></li>
                           <li><a href="Listening.jsp">Listening Test</a></li>

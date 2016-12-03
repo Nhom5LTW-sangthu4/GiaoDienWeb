@@ -1,3 +1,7 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="s" %>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -103,14 +107,19 @@ tr:nth-child(even) {
      <div class="col-md-8">
       <div class="container">
         <div class="media">
-          <img src="Image/MsHoa.jpg">
+          <img src="Image/hinh1.jpg">
         </div>
       </div>
     </div>
     <div class="col-md-4">
       </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Personalinfo.jsp">Nhóm 5</a></li>
+             <li class="active">
+                 <a href="Personalinfo.jsp?username=<c:out value="${sessionScope['loginUser']}" />"> 
+                     <c:out value="${sessionScope['loginUser']}" />
+                   <span class="sr-only"></span>
+                 </a>
+              </li>   
             <li class="active"><a href="index.jsp">Đăng Xuất<span class="sr-only"></span></a></li>
           </ul>
           
@@ -130,7 +139,7 @@ tr:nth-child(even) {
 
   <div class="row">
           <div class="col-md-12">
-            <nav class="navbar navbar-default" style="background: brown;">
+            <nav class="navbar navbar-default" style="background: #07E5F5;">
               <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                        <span class="sr-only">Toggle navigation</span>
@@ -141,14 +150,14 @@ tr:nth-child(even) {
               </div>
               <div class="navbar-collapse collapse" id="main-menu">
                 <ul class="nav nav-justified " >
-                    <li><a class="textcolor" style="color: blue" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
-                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="HomeSauDangNhap.jsp"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Up Load<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="UpLoad.jsp">Đăng bài</a></li>
                           <li><a href="UpLoad2.jsp">Những bài đã đăng </a></li>
                         </ul>  
-                    <li><a class="textcolor" style="color: blue" href="Share.jsp"><strong>Share</strong></a></li>
-                    <li class="dropdown"><a style="color: blue" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
+                    <li><a class="textcolor" style="color: black" href="Share.jsp"><strong>Share</strong></a></li>
+                    <li class="dropdown"><a style="color: black" class="dropdown-toggle" data-toggle="dropdown" href="#">Test<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="Reading.jsp">Reading Test</a></li>
                           <li><a href="Listening.jsp">Listening Test</a></li>
@@ -187,7 +196,7 @@ tr:nth-child(even) {
           <!--end cột trái-->
 
           <!--cột giữa-->
-            <div class="col-md-10">
+            <div class="col-md-6">
               <div class="panel panel-info">
                 <div class="panel-heading">
                   <h3 class="panel-title">Thông Tin Tài Khoản</h3>
@@ -195,53 +204,50 @@ tr:nth-child(even) {
                 <div class="panel-body">
                     <!--cot trái-->
                       <div class="col-md-8">
+                      <s:setDataSource var="dbsource" driver="com.mysql.jdbc.Driver"
+					          				         	url="jdbc:mysql://localhost/laptrinhweb"
+					                          		   user="root"  password="Thief1996"/>
+					 	<s:query dataSource="${dbsource}" var="thongtin">
+								SELECT * from account
+								where account.username='${param.username}'				    
+						</s:query>
                         <form id="FormGuiBai" method="post" class="form-horizontal" action="" role="form">
-                          <div class="form-group">
-                            <label for="tieude" class="col-sm-2">Tên</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="ten" placeholder="Nhóm 5">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                          
-                          </div>
-                          <div class="form-group">
-                            <label for="tentacgia" class="col-sm-2">Địa Chỉ</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="diachi" placeholder="Số 1, Võ Văn Ngân">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="coquan" class="col-sm-2">Email</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="email" placeholder="Nhom5@gmail.com">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="thongtinlienlac" class="col-sm-2">Số Điện Thoại</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="sdt" placeholder="0123456789">
-                            </div>
-                          </div>
-                          <div class="form-group">
-
-                          </div>
+                        <c:forEach var="row" items="${thongtin.rows}">
+	                          <div class="form-group">
+	                            <label class="col-sm-2">Tên</label>
+	                            <div class="col-sm-10">
+	                              	${row.fullname}
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	                          
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="col-sm-2">User Name</label>
+	                            <div class="col-sm-10">
+	                              ${row.username}
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="col-sm-2">Email</label>
+	                            <div class="col-sm-10">
+	                              ${row.email}
+	                            </div>
+	                          </div>
+	                          <div class="form-group">
+	
+	                          </div>
+	                          <div class="form-group">
+	                            <label class="col-sm-2">Mobile</label>
+	                            <div class="col-sm-10">
+	                              ${row.mobile}
+	                            </div>
+	                          </div>
+                          </c:forEach>
                         </form>
                         
 
                       </div>
-                    <!--end cột trái-->
-
-                    <!--cot phải-->
-                      <div class="col-md-4">
-                        <img src="Image/1.jpg" alt="..." class="img-thumbnail"> <br>
-                        <br>
-                        <label>Đổi Ảnh Đại Diện</label>
-
-                        <input type="file" id="">
-                              
-                      </div>
-                    <!--end cot phải-->
 
                     </div>
                     <div class="row">
